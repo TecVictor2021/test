@@ -46,5 +46,5 @@ jobs:
           dotnet build-server shutdown
           dotnet build 
           dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../TestResults/" /p:MergeWith="../TestResults/" --collect "Code coverage" --logger trx 
-          tree
+          tree /f
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
