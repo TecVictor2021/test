@@ -45,6 +45,6 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"TecVictor2021_test" /o:"tecvictor2021" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build-server shutdown
           dotnet build 
-          dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="./TestResults/" /p:MergeWith="./TestResults/" --collect "Code coverage" --logger trx ./MarketTecBotApiNet5.Test/MarketTecBotApiNet5.Test.csproj
+          dotnet test --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../TestResults/" /p:MergeWith="../TestResults/" --collect "Code coverage" --logger trx ./MarketTecBotApiNet5.Test/MarketTecBotApiNet5.Test.csproj
           tree
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
