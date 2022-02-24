@@ -48,6 +48,10 @@ jobs:
       #    dotnet test --blame --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput="../TestResults/" /p:MergeWith="../TestResults/" --collect "Code coverage" --logger trx 
       #    tree /f
       #    .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      - name: Ensure .NET Installed
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.x
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
