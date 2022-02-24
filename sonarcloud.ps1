@@ -35,6 +35,6 @@ Write-host "sonarcloud.ps1 before build"
 dotnet build --configuration release # src --configuration release
 Write-host "sonarcloud.ps1 before test"
 dotnet test "./MarketTecBotApiNet5.Test/MarketTecBotApiNet5.Test.csproj" --collect:"XPlat Code Coverage" --results-directory TestResults/ --logger "trx;LogFileName=unittests.trx" --no-build --no-restore --configuration release -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=opencover
-         
+tree /f    
 Write-host "sonarcloud.ps1 before end"
 dotnet tool run dotnet-sonarscanner end /d:sonar.login="$sonarSecret"
