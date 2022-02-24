@@ -17,8 +17,10 @@ if (Test-Path $testOutputDir)
 }
 
 
-$version = Invoke-Gitversion
-$assemblyVer = $version.assemblyVersion 
+#$version = Invoke-Gitversion
+#$assemblyVer = $version.assemblyVersion 
+$assemblyVer = 5.5.1
+
 
 $branch = git branch --show-current
 Write-Host "branch is $branch"
