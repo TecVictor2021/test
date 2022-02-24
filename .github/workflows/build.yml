@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     name: build
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: dotnet-sonarscanner
       uses: spoland/dotnet-sonarcloud-analysis@v1.0
