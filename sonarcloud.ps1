@@ -17,9 +17,9 @@ if (Test-Path $testOutputDir)
 }
 
 Write-host "sonarcloud.ps1 after if"
-$version = Invoke-Gitversion
-$assemblyVer = $version.assemblyVersion 
-#$assemblyVer = 5.5.1
+#$version = Invoke-Gitversion
+#$assemblyVer = $version.assemblyVersion 
+$assemblyVer = 5.5.1
 
 
 $branch = git branch --show-current
