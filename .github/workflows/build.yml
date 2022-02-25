@@ -19,7 +19,7 @@ jobs:
       uses: SonarSource/sonarcloud-github-action@v1.6
       with:
         # Additional arguments to the sonarcloud scanner
-        args: -d:"sonar.projectKey=TecVictor2021_test" -d:"sonar.organization=tecvictor2021"
+        args: -D:"sonar.projectKey=TecVictor2021_test" -D:"sonar.organization=tecvictor2021"
         # Set the sonar.projectBaseDir analysis property
         projectBaseDir: .
     - name: dotnet-sonarscanner
