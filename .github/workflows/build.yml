@@ -22,6 +22,10 @@ jobs:
         args: -Dsonar.projectKey=TecVictor2021_test -Dsonar.organization=tecvictor2021
         # Set the sonar.projectBaseDir analysis property
         projectBaseDir: .
+    - name: Ensure .NET Installed
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.x
     - name: dotnet-sonarscanner
       uses: spoland/dotnet-sonarcloud-analysis@v1.0
       with:
