@@ -22,6 +22,8 @@ jobs:
         #args: # optional
         # Set the sonar.projectBaseDir analysis property
         projectBaseDir: .
+        project-key: TecVictor2021_test
+        sonar-organization: tecvictor2021
     - name: dotnet-sonarscanner
       uses: spoland/dotnet-sonarcloud-analysis@v1.0
       with:
