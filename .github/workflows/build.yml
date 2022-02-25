@@ -18,7 +18,7 @@ jobs:
         # Additional arguments to the sonarcloud scanner
         #args: # optional
         # Set the sonar.projectBaseDir analysis property
-        projectBaseDir: .
+        projectBaseDir: .\.sonar\scanner\
     - name: dotnet-sonarscanner
       uses: spoland/dotnet-sonarcloud-analysis@v1.0
       with:
